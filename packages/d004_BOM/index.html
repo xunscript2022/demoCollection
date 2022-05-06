@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    Hello, BOM!
+    <input />
+    <script>
+        var bool = true;
+        pushHistory();
+
+        function pushHistory() {
+            var state = {
+                title: "title",
+                url: "#"
+            };
+            window.history.pushState(state, "title", "#");
+        };
+        window.onload = function () {
+            setTimeout(function () {
+                window.addEventListener('popstate', function () {
+                    // 没有交互则不执行
+                    if (bool == true) {
+                        alert('popstate')
+                    }
+                });
+
+            }, 0);
+
+        };
+
+        // 基本不执行？
+        window.addEventListener('popstate', function () {
+            alert('popstate')
+        });
+
+        window.onpagehide = event => {
+            alert(event)
+        if (event.persisted) {
+            /* the page isn't being discarded, so it can be reused later */
+            }
+        }
+
+    </script>
+</body>
+
+</html>
