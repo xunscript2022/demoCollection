@@ -1,0 +1,26 @@
+{
+  "name": "d031_watermark",
+  "version": "1.0.0",
+  "description": "> TODO: description",
+  "author": "xunscript2022 <xunscript@163.com>",
+  "homepage": "https://github.com/xunscript2022/demoCollection#readme",
+  "license": "ISC",
+  "main": "lib/d031_watermark.js",
+  "directories": {
+    "lib": "lib",
+    "test": "__tests__"
+  },
+  "files": [
+    "lib"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/xunscript2022/demoCollection.git"
+  },
+  "scripts": {
+    "test": "echo \"Error: run tests from root\" && exit 1"
+  },
+  "bugs": {
+    "url": "https://github.com/xunscript2022/demoCollection/issues"
+  }
+}
