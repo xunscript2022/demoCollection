@@ -5,12 +5,16 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=<device-width>, initial-scale=1.0">
     <title>Document</title>
+    <script src="./index.js"></script>
 </head>
 <body>
     <!-- js会直接打开 -->
     <a href="./lib/d032_download.js" download="text.js">点击下载</a>
     <a href="file:///D:/github/demoCollection/packages/d032_download/lib/d032_download.js" download>点击下载</a>
     <a href="./lib/test.xlsx" download>点击下载excel</a>
+    <input type="file">点击获取文件</input>
+    <button onclick="downloadBlob('blob.xlsx')">先input上传文件再点击转换成blob下载</button>
+    <button onclick="downloadUrl('./lib/test.xlsx', 'url.xlsx')">点击直接url下载</button>
 
 </body>
 </html>
