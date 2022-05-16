@@ -9,12 +9,15 @@
 </head>
 <body>
     <!-- js会直接打开 -->
-    <a href="./lib/d032_download.js" download="text.js">点击下载</a>
-    <a href="file:///D:/github/demoCollection/packages/d032_download/lib/d032_download.js" download>点击下载</a>
+    <a href="./lib/d032_download.js" download="text.js">点击下载相对路径js</a>
+    <a href="file:///D:/github/demoCollection/packages/d032_download/lib/d032_download.js" download>点击下载绝对路径js</a>
     <a href="./lib/test.xlsx" download>点击下载excel</a>
+    <hr />
     <input type="file">点击获取文件</input>
-    <button onclick="downloadBlob('blob.xlsx')">先input上传文件再点击转换成blob下载</button>
+    <hr />
     <button onclick="downloadUrl('./lib/test.xlsx', 'url.xlsx')">点击直接url下载</button>
+    <button onclick="downloadBlob('blob.xlsx')">先input上传文件再点击转换成blob下载</button>
+    <button onclick="downloadAndSave('url.xlsx')">先input上传文件再点击下载并保存在固定目录</button>
 
 </body>
 </html>

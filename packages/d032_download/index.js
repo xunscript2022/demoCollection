@@ -21,3 +21,28 @@ function downloadUrl(url,fileName){
     a.download = fileName;
     a.click();
 }
+
+
+async function downloadAndSave(fileName){
+    // File System Access API, window.showSaveFilePicker etc.
+    // compatibility, try...catch...
+    const file = document.querySelector('input').files[0];
+    console.log(file, file instanceof Blob);
+    const fileSystemFileHandle = await  window.showSaveFilePicker({
+        // excludeAcceptAllOption: false,
+        suggestedName: fileName,
+        types: [
+            {
+                description: 'excel',
+                accept: {
+                    'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet':['.xlsx']
+                }
+            }
+        ]
+    })
+
+    const writable = await fileSystemFileHandle.createWritable();
+    await writable.write(file);
+    await writable.close();
+    console.log(fileSystemFileHandle)
+}
