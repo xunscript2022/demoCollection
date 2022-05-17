@@ -23,5 +23,8 @@
   "bugs": {
     "url": "https://github.com/xunscript2022/demoCollection/issues"
   },
-  "homepage": "https://github.com/xunscript2022/demoCollection#readme"
+  "homepage": "https://github.com/xunscript2022/demoCollection#readme",
+  "dependencies": {
+    "jointjs": "^3.5.5"
+  }
 }

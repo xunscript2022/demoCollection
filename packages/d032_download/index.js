@@ -46,3 +46,5 @@ async function downloadAndSave(fileName){
     await writable.close();
     console.log(fileSystemFileHandle)
 }
+
+// libary: FileSaver, browser-fs-access
